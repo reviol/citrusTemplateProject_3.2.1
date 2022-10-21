@@ -1,4 +1,4 @@
-package otp;
+package otp.tests;
 
 import org.testng.annotations.Test;
 
@@ -12,9 +12,10 @@ import static com.consol.citrus.actions.EchoAction.Builder.echo;
  *
  * @author Citrus
  */
-@Test
+
 public class SampleJavaIT extends TestNGCitrusSpringSupport {
 
+    @Test
     @CitrusTest
     public void echoToday() {
         variable("now", "citrus:currentDate()");
@@ -22,6 +23,7 @@ public class SampleJavaIT extends TestNGCitrusSpringSupport {
         run(echo("Today is: ${now}"));
     }
 
+    @Test
     @CitrusTest(name = "SampleJavaTest.sayHello")
     public void sayHello() {
         run(echo("Hello Citrus!"));

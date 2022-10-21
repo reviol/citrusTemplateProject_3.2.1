@@ -1,4 +1,4 @@
-package otp;
+package otp.tests;
 
 import org.testng.annotations.Test;
 
